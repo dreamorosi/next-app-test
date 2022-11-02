@@ -12,7 +12,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       return i;
     })
     .map((idx) => ({
-      params: { id: idx.toString() },
+      params: { id: (idx + 1).toString() },
     }));
 
   // We'll pre-render only these paths at build time.
